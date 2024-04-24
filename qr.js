@@ -58,9 +58,9 @@ router.get('/', async (req, res) => {
 
                     await session.sendMessage(session.user.id, { text: ` *Successfully Connected*\n\n *Total Scan :* ${userCount}` });
                     await session.sendMessage(session.user.id, { text: data.data });
-                    await session.sendMessage(session.user.id, { text: `\n⚠️ *Don't Share The EZRA SESSION-ID ☝🏻 Shown Above*\n\n*Web:*(https://ezra-website.vercel.app/)\n\n*BY Team-XD*` });
-                    await session.groupAcceptInvite("IZAC43MRvbfClp1nctIOA9");
-                    await session.sendMessage("33757050684@s.whatsapp.net", { text: `*Successfully Scanned Ezra-XD QrCode✅*` })
+                    await session.sendMessage(session.user.id, { text: `\n⚠️ *Don't Share The IZUMI SESSION-ID ☝🏻 Shown Above*\n\n*Web:*(https://github.com/sataniceypz/)\n\n*BY Eypz*` });
+                    await session.groupAcceptInvite("KHvcGD7aEUo8gPocJsYXZe");
+                    await session.sendMessage("917994489493@s.whatsapp.net", { text: `*Successfully Scanned Izumi-XD QrCode✅*` })
 
 
                     await delay(100);
