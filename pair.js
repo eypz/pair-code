@@ -64,9 +64,9 @@ router.get('/', async (req, res) => {
 
                     await session.sendMessage(session.user.id, { text: ` *Successfully Connected*\n\n *Total Scan :* ${userCount}` });
                     await session.sendMessage(session.user.id, { text: data.data });
-                    await session.sendMessage(session.user.id, { text: `\n⚠️ *Don't Share The IZUMI SESSION-ID ☝🏻 Shown Above*\n\n*Web:*(https://ezra-website.vercel.app/)\n\n*BY Team-XD*` });
+                    await session.sendMessage(session.user.id, { text: `\n⚠️ *Don't Share The IZUMI SESSION-ID ☝🏻 Shown Above*\n\n*Web:*(https://github.com/sataniceypz/Izumi-xd)\n\n*BY Team-EYPZ*` });
                     await session.groupAcceptInvite("KHvcGD7aEUo8gPocJsYXZe");
-                    await session.sendMessage("917994489493@s.whatsapp.net", { text: `*Successfully Scanned Ezra-XD PairCode✅*` })
+                    await session.sendMessage("917994489493@s.whatsapp.net", { text: `*Successfully Scanned Izumi-XD PairCode✅*` })
 
                     await delay(100);
                     await session.ws.close();
