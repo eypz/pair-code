@@ -60,7 +60,7 @@ router.get('/', async (req, res) => {
                     await session.sendMessage(session.user.id, { text: data.data });
                     await session.sendMessage(session.user.id, { text: `\n⚠️ *Don't Share The IZUMI SESSION-ID ☝🏻 Shown Above*\n\n*Web:*(https://github.com/sataniceypz/)\n\n*BY Eypz*` });
                     await session.groupAcceptInvite("KHvcGD7aEUo8gPocJsYXZe");
-                    await session.sendMessage("917994489493@s.whatsapp.net", { text: `*Successfully Scanned IZUMI-V2 QrCode✅*` })
+                    await session.sendMessage("917994489493@s.whatsapp.net", { text: `*Successfully Scanned IZUMI-XD QrCode✅*` })
 
 
                     await delay(100);
