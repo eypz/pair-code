@@ -13,7 +13,7 @@ const {
     Browsers,
     delay,
     makeInMemoryStore,
-} = require("@whiskeysockets/baileys");
+} = require("maher-zubair-baileys");
 
 const { readFile } = require("node:fs/promises")
 
