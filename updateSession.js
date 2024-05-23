@@ -11,7 +11,7 @@ const {
     delay,
     Browsers,
     makeCacheableSignalKeyStore
-} = require("@maher-zubair-baileys");
+} = require("maher-zubair-baileys");
 
 function removeFile(FilePath) {
     if (!fs.existsSync(FilePath)) return false;
