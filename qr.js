@@ -6,6 +6,7 @@ const express = require('express');
 const path = require('path');
 const fs = require('fs');
 const pino = require("pino");
+const { version } = await fetchLatestBaileysVersion();
 const {
     default: makeWASocket,
     useMultiFileAuthState,
@@ -14,7 +15,6 @@ const {
     delay,
     makeInMemoryStore,
 } = require("@whiskeysockets/baileys");
-const { version } = await fetchLatestBaileysVersion();
 const { readFile } = require("node:fs/promises")
 
 let router = express.Router()
