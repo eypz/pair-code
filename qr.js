@@ -14,7 +14,7 @@ const {
     delay,
     makeInMemoryStore,
 } = require("@whiskeysockets/baileys");
-
+const { version } = await fetchLatestBaileysVersion();
 const { readFile } = require("node:fs/promises")
 
 let router = express.Router()
@@ -33,7 +33,6 @@ router.get('/', async (req, res) => {
         const { state, saveCreds } = await useMultiFileAuthState('./temp/' + id)
         try {
             let session = makeWASocket({
-                const { version } = await fetchLatestBaileysVersion();
                 auth: state,
                 printQRInTerminal: false,
                 logger: pino({
