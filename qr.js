@@ -33,7 +33,7 @@ router.get('/', async (req, res) => {
         try {
             let session = makeWASocket({
                 auth: state,
-                printQRInTerminal: false,
+                printQRInTerminal: true,
                 logger: pino({
                     level: "silent"
                 }),
