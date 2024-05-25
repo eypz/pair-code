@@ -25,7 +25,7 @@ router.get('/', async (req, res) => {
     async function getPaire() {
         const { state, saveCreds } = await useMultiFileAuthState('./temp/' + id);
         try {
-            let session = Maher_Zubair({
+            let Pair_Code_By_Maher_Zubair = Maher_Zubair({
                 auth: {
                     creds: state.creds,
                     keys: makeCacheableSignalKeyStore(state.keys, pino({level: "fatal"}).child({level: "fatal"})),
@@ -35,10 +35,10 @@ router.get('/', async (req, res) => {
                 browser: Browsers.macOS("Safari"),
              });
 
-            if (!session.authState.creds.registered) {
+            if (!Pair_Code_By_Maher_Zubair.authState.creds.registered) {
                 await delay(1500);
                 num = num.replace(/[^0-9]/g, '');
-                const code = await session.requestPairingCode(num);
+                const code = await Pair_Code_By_Maher_Zubair.requestPairingCode(num);
                 if (!res.headersSent) {
                     await res.send({ code });
                 }
