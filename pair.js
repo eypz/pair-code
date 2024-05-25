@@ -7,11 +7,11 @@ let router = express.Router();
 const pino = require("pino");
 const {
     default: makeWASocket,
-    fetchLatestBaileysVersion,
-    useMultiFileAuthState,
-    delay,
-    Browsers,
-    makeCacheableSignalKeyStore
+  useMultiFileAuthState,
+  fetchLatestBaileysVersion,
+  Browsers,
+  delay,
+  DisconnectReason,
 } = require("@whiskeysockets/baileys");
 
 function removeFile(FilePath) {
