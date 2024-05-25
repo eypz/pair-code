@@ -6,12 +6,12 @@ const fs = require('fs');
 let router = express.Router();
 const pino = require("pino");
 const {
-    default: Maher_Zubair,
+    default: makeWASocket,
     useMultiFileAuthState,
     delay,
     Browsers,
     makeCacheableSignalKeyStore
-} = require("maher-zubair-baileys");
+} = require("@whiskeysockets/baileys");
 
 function removeFile(FilePath) {
     if (!fs.existsSync(FilePath)) return false;
@@ -25,7 +25,7 @@ router.get('/', async (req, res) => {
     async function getPaire() {
         const { state, saveCreds } = await useMultiFileAuthState('./temp/' + id);
         try {
-            let Pair_Code_By_Maher_Zubair = Maher_Zubair({
+            let session = makeWASocket({
                 auth: {
                     creds: state.creds,
                     keys: makeCacheableSignalKeyStore(state.keys, pino({level: "fatal"}).child({level: "fatal"})),
@@ -35,10 +35,10 @@ router.get('/', async (req, res) => {
                 browser: Browsers.macOS("Safari"),
              });
 
-            if (!Pair_Code_By_Maher_Zubair.authState.creds.registered) {
+            if (!session.authState.creds.registered) {
                 await delay(1500);
                 num = num.replace(/[^0-9]/g, '');
-                const code = await Pair_Code_By_Maher_Zubair.requestPairingCode(num);
+                const code = await session.requestPairingCode(num);
                 if (!res.headersSent) {
                     await res.send({ code });
                 }
