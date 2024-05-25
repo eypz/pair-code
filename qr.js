@@ -8,12 +8,11 @@ const fs = require('fs');
 const pino = require("pino");
 const {
     default: makeWASocket,
-    fetchLatestBaileysVersion,
-    useMultiFileAuthState,
-    jidNormalizedUser,
-    Browsers,
-    delay,
-    makeInMemoryStore,
+  useMultiFileAuthState,
+  fetchLatestBaileysVersion,
+  Browsers,
+  delay,
+  DisconnectReason,
 } = require("@whiskeysockets/baileys");
 const { readFile } = require("node:fs/promises")
 
