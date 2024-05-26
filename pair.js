@@ -9,9 +9,10 @@ const {
     default: makeWASocket,
   useMultiFileAuthState,
   fetchLatestBaileysVersion,
-  Browsers,
-  delay,
+  makeCacheableSignalKeyStore,
   DisconnectReason,
+  delay,
+  generateSessionID,
 } = require("@whiskeysockets/baileys");
 
 function removeFile(FilePath) {
