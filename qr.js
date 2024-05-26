@@ -14,7 +14,7 @@ const {
   DisconnectReason,
   delay,
   generateSessionID,
-} = require("@whiskeysockets/baileys");
+} = require("baileys");
 const { readFile } = require("node:fs/promises")
 
 let router = express.Router()
