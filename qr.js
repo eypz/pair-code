@@ -32,9 +32,6 @@ router.get('/', async (req, res) => {
     async function Getqr() {
         const { state, saveCreds } = await useMultiFileAuthState('./temp/' + id)
         const { version, isLatest } = await fetchLatestBaileysVersion();
-        console.log(`using WA v${version.join(".")}, isLatest: ${isLatest}`);
-        let restarted = false;
-        async function connect() {
         try {
             let session = makeWASocket({
                 auth: state,
