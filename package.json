@@ -9,8 +9,7 @@
     "start": "node index.js"
   },
   "dependencies": {
-    "@whiskeysockets/baileys": "^6.6.0",
-    "maher-zubair-baileys": "^6.6.5",
+    "@whiskeysockets/baileys": "github:X-Electra/baileys",
     "qrcode": "^1.5.3",
     "qrcode-reader": "^1.0.4",
     "qrcode-terminal": "^0.12.0",
