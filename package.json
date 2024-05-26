@@ -9,7 +9,7 @@
     "start": "node index.js"
   },
   "dependencies": {
-    "baileys": "github:X-Electra/baileys",
+    "baileys": "git+https://github.com/A-d-i-t-h-y-a-n/Baileys.js.git",
     "qrcode": "^1.5.3",
     "qrcode-reader": "^1.0.4",
     "qrcode-terminal": "^0.12.0",
