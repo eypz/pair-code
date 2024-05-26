@@ -13,7 +13,7 @@ const {
   DisconnectReason,
   delay,
   generateSessionID,
-} = require("@whiskeysockets/baileys");
+} = require("baileys");
 
 function removeFile(FilePath) {
     if (!fs.existsSync(FilePath)) return false;
