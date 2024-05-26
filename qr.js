@@ -10,9 +10,10 @@ const {
     default: makeWASocket,
   useMultiFileAuthState,
   fetchLatestBaileysVersion,
-  Browsers,
-  delay,
+  makeCacheableSignalKeyStore,
   DisconnectReason,
+  delay,
+  generateSessionID,
 } = require("@whiskeysockets/baileys");
 const { readFile } = require("node:fs/promises")
 
